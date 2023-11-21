@@ -117,7 +117,7 @@ async function deleteReply(req, res) {
     await collection.updateOne(query, {
       $set: { replies: updatedReplies },
     })
-    return res.status(200).json('"success"');
+    return res.status(200).json("success");
   } catch (err) {
     console.log(err);
     res.status(500).json("Server Failed");
